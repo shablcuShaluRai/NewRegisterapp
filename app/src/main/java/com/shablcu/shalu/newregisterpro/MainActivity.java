@@ -1,6 +1,7 @@
 package com.shablcu.shalu.newregisterpro;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,13 +9,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
 
 
@@ -28,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(getBaseContext(), "You Clicked login!", Toast.LENGTH_SHORT).show();
                             break;
                         case R.id.signup:
-                            Toast.makeText(getBaseContext(), "You Clicked Signup", Toast.LENGTH_SHORT).show();
+
+                            Intent intent=new Intent(MainActivity.this, register.class);
+                            startActivity(intent);
                             break;
                     }
                 }
@@ -39,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             findViewById(R.id.signup).setOnClickListener(handler);
 
         }catch(Exception e){
-            Log.e("Android Button Tutorial", e.toString());
+            Log.e("OOPs", e.toString());
         }
     }
 }
