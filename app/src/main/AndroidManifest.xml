@@ -15,7 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".register">
+        <activity android:name=".Register">
             <intent-filter>
                 <action android:name="com.shablcu.shalu.newregisterpro.MainActivity.register" />
 
